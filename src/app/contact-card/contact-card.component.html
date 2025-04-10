@@ -1,0 +1,15 @@
+<div class="card" style="width: 18rem">
+  <div class="card-body">
+    <h5 class="card-title">Contatto N. {{ contact.id }}</h5>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Nome: {{ contact.name }}</li>
+    <li class="list-group-item">Email: {{ contact.email }}</li>
+    <li class="list-group-item">Indirizzo: {{ contact.address }}</li>
+  </ul>
+  <div class="card-body">
+    <button href="#" class="btn btn-danger" (click)="onDelete()">
+      Cancella Contatto
+    </button>
+  </div>
+</div>
