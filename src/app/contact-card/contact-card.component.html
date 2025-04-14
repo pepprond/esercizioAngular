@@ -5,11 +5,19 @@
   <ul class="list-group list-group-flush">
     <li class="list-group-item">Nome: {{ contact.name }}</li>
     <li class="list-group-item">Email: {{ contact.email }}</li>
-    <li class="list-group-item">Indirizzo: {{ contact.address }}</li>
   </ul>
   <div class="card-body">
-    <button href="#" class="btn btn-danger" (click)="onDelete()">
-      Cancella Contatto
-    </button>
+    <div class="row">
+      <button href="#" class="btn btn-danger mb-3" (click)="onDelete()">
+        Cancella Contatto
+      </button>
+      <br />
+      <button
+        class="btn btn-primary mb-1"
+        [routerLink]="['/dettaglio', contact.id]"
+      >
+        Dettagli Contatto
+      </button>
+    </div>
   </div>
 </div>

@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ContactCardComponent } from './contact-card.component';
+import { DettaglioContattoComponent } from './dettaglio-contatto.component';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [ContactCardComponent],
+  declarations: [DettaglioContattoComponent],
   imports: [CommonModule, RouterModule],
-  exports: [ContactCardComponent],
 })
-export class ContactCardModule {}
+export class DettaglioContattoModule {}

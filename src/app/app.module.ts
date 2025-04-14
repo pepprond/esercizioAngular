@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContactListModule } from './contact-list/contact-list.module';
 import { ContactCardModule } from './contact-card/contact-card.module';
+import { DettaglioContattoModule } from './dettaglio-contatto/dettaglio-contatto.module';
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -13,6 +15,7 @@ import { ContactCardModule } from './contact-card/contact-card.module';
     HttpClientModule,
     ContactListModule,
     ContactCardModule,
+    DettaglioContattoModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

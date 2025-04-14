@@ -9,11 +9,21 @@ import { Contact } from '../model/contact';
 })
 export class ContactListComponent implements OnInit {
   contactList: Contact[] = [];
+  contactListfiltrata: Contact[] = [];
   constructor(private contactService: ContactService) {}
   ngOnInit(): void {
     this.contactService.getContacts().subscribe((dataList) => {
       this.contactList = dataList;
+      this.contactListfiltrata = dataList;
     });
+  }
+
+  cercaContatto(event: Event): void {
+    let searchTerm = (event.target as HTMLInputElement).value;
+    searchTerm = searchTerm.toLowerCase();
+    this.contactListfiltrata = this.contactList.filter((contact) =>
+      contact.name.toLowerCase().includes(searchTerm)
+    );
   }
   deleteContactSelected(contactId: number) {
     this.contactService.deleteContact(contactId).subscribe(() => {
