@@ -1,14 +1,13 @@
-<h1 class="text-center">Lista Contatti</h1>
-<h2 class="mb-4">Cerca contatto</h2>
-<form class="d-flex mb-4" role="search" onsubmit="cerca(event)">
+<mat-form-field onsubmit="cerca(event)">
   <input
+    matInput
     class="form-control me-2"
     type="search"
     placeholder="Cerca..."
     aria-label="Search"
     (keyup)="cercaContatto($event)"
   />
-</form>
+</mat-form-field>
 
 <div class="row">
   <div class="col-md-4 mb-4" *ngFor="let contact of contactListfiltrata">

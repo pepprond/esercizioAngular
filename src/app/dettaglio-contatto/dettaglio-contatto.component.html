@@ -1,7 +1,12 @@
 <div *ngIf="contatto">
-  <h2>Dettaglio Contatto</h2>
+  <mat-card class="dettaglio-card">
+    <mat-card-title>Dettaglio Contatto</mat-card-title>
+    <mat-divider></mat-divider>
 
-  <p><strong>Nome:</strong> {{ contatto.name }}</p>
-  <p><strong>Email:</strong> {{ contatto.email }}</p>
-  <p><strong>indirizzo:</strong> {{ contatto.address }}</p>
+    <mat-card-content>
+      <p><strong>Nome:</strong> {{ contatto.name }}</p>
+      <p><strong>Email:</strong> {{ contatto.email }}</p>
+      <p><strong>Indirizzo:</strong> {{ contatto.address }}</p>
+    </mat-card-content>
+  </mat-card>
 </div>

@@ -1,23 +1,18 @@
-<div class="card" style="width: 18rem">
-  <div class="card-body">
-    <h5 class="card-title">Contatto N. {{ contact.id }}</h5>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Nome: {{ contact.name }}</li>
-    <li class="list-group-item">Email: {{ contact.email }}</li>
-  </ul>
-  <div class="card-body">
-    <div class="row">
-      <button href="#" class="btn btn-danger mb-3" (click)="onDelete()">
-        Cancella Contatto
-      </button>
-      <br />
-      <button
-        class="btn btn-primary mb-1"
-        [routerLink]="['/dettaglio', contact.id]"
-      >
-        Dettagli Contatto
-      </button>
-    </div>
-  </div>
-</div>
+<mat-card class="contact-card">
+  <mat-card-header>
+    <mat-card-title class="card-title"
+      >Contatto N. {{ contact.id }}</mat-card-title
+    >
+  </mat-card-header>
+  <mat-card-content>
+    <p>Nome: {{ contact.name }}</p>
+    <p>Email: {{ contact.email }}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button href="#" mat-button (click)="onDelete()">Cancella Contatto</button>
+    <br />
+    <button mat-button [routerLink]="['/dettaglio', contact.id]">
+      Dettagli Contatto
+    </button>
+  </mat-card-actions>
+</mat-card>
